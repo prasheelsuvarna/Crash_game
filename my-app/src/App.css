@@ -1,0 +1,186 @@
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.section {
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #444;
+  text-align: center;
+}
+
+.input-field, .select-field {
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus, .select-field:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.select-field {
+  cursor: pointer;
+}
+
+.bet-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.currency-label {
+  margin-left: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.deposit-button, .bet-button, .cashout-button, .arena-button, .close-button {
+  padding: 8px 16px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.deposit-button {
+  background-color: #007bff;
+}
+
+.deposit-button:hover:not(:disabled) {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.deposit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.bet-button {
+  background-color: #28a745;
+}
+
+.bet-button:hover:not(:disabled) {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.bet-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.cashout-button {
+  background-color: #dc3545;
+}
+
+.cashout-button:hover:not(:disabled) {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+.cashout-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.arena-button {
+  background-color: #ff9800;
+  font-size: 1.1rem;
+}
+
+.arena-button:hover:not(:disabled) {
+  background-color: #e68900;
+  transform: scale(1.05);
+}
+
+.message-success, .message-error {
+  margin-top: 10px;
+  font-weight: 600;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+.message-success {
+  color: #28a745;
+}
+
+.message-error {
+  color: #dc3545;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease;
+}
+
+.popup-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.popup-content p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #555;
+}
