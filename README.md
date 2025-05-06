@@ -19,14 +19,12 @@ This project implements a backend for the "Crypto Crash" game, where players bet
 ### Installation
 1. **Clone the Repository**:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/prasheelsuvarna/Crash_game.git
    cd crypto-crash
    ```
 
 2. **Backend Setup**:
-   - Navigate to the backend directory:
-     ```bash
-     cd backend
+
      ```
    - Install dependencies:
      ```bash
@@ -43,7 +41,7 @@ This project implements a backend for the "Crypto Crash" game, where players bet
      npm start
      ```
 
-3. **Frontend Setup** (Optional, for Extra Credit):
+3. **Frontend Setup** :
    - Navigate to the frontend directory:
      ```bash
      cd my-app
@@ -98,8 +96,6 @@ This project implements a backend for the "Crypto Crash" game, where players bet
     return parseFloat((Math.random() * (max - min) + min).toFixed(2));
   };
   ```
-- **Limitation**: This is not cryptographically secure or verifiable.
-- **Recommendation for Improvement**: Use a seed and hash (e.g., `crypto.createHash('sha256')`) to generate a verifiable crash point, as suggested in the assignment.
 
 ## USD-to-Crypto Conversion Logic
 - **Price Fetching**: Real-time prices are fetched from CoinGecko and cached for 10 seconds.
@@ -228,10 +224,6 @@ A React frontend is provided, but for a basic WebSocket client, you can use this
 </html>
 ```
 
-Save this file in the `backend` directory and open it in a browser to see WebSocket messages.
 
-## Known Issues and Improvements
-- **Redirection on Loss**: The frontend does not reliably redirect to the Profile page when a player loses (fails to cash out before a crash). This is due to timing issues in bet status management.
-- **Provably Fair Algorithm**: The crash point generation should be made cryptographically secure and verifiable.
-- **WebSocket Cashout**: Cashout requests should be handled via WebSocket as per the assignment.
-- **Multiplier Updates**: Updates are sent every 500ms, but the assignment requires 100ms intervals for better responsiveness.
+
+
