@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "c0ae8638-16ff-4180-a557-807f7aa59d11",
+		"name": "Crash_game",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44713580",
+		"_collection_link": "https://prasheel-859908.postman.co/workspace/82d494e4-3166-4712-8552-65797d9fb50f/collection/44713580-c0ae8638-16ff-4180-a557-807f7aa59d11?action=share&source=collection_link&creator=44713580"
+	},
+	"item": [
+		{
+			"name": "create player",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"playerId\": \"player1\", \"username\": \"JohnDoe\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/player",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"player"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://localhost:3000/player \\\r\n-H \"Content-Type: application/json\" \\\r\n-d '{\"playerId\": \"player1\", \"username\": \"JohnDoe\"}'"
+			},
+			"response": []
+		},
+		{
+			"name": "check balance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/balance/player1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"balance",
+						"player1"
+					]
+				},
+				"description": "Generated from cURL: curl http://localhost:3000/balance/player1"
+			},
+			"response": []
+		},
+		{
+			"name": "deposit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"playerId\": \"player1\", \"cryptoAmount\": 0.001, \"currency\": \"BTC\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/deposit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"deposit"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://localhost:3000/deposit \\\r\n-H \"Content-Type: application/json\" \\\r\n-d '{\"playerId\": \"player1\", \"cryptoAmount\": 0.001, \"currency\": \"BTC\"}'"
+			},
+			"response": []
+		},
+		{
+			"name": "place a bet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"playerId\": \"player1\", \"usdAmount\": 10, \"currency\": \"BTC\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/bet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bet"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://localhost:3000/bet \\\r\n-H \"Content-Type: application/json\" \\\r\n-d '{\"playerId\": \"player1\", \"usdAmount\": 10, \"currency\": \"BTC\"}'"
+			},
+			"response": []
+		},
+		{
+			"name": "cashout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"playerId\": \"player1\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/cashout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cashout"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://localhost:3000/cashout \\\r\n-H \"Content-Type: application/json\" \\\r\n-d '{\"playerId\": \"player1\"}'"
+			},
+			"response": []
+		}
+	]
+}
